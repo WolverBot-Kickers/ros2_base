@@ -1,11 +1,23 @@
 services:
   ros2:
     build: .
+    networks:
+      - ros2
     environment:
-      DISPLAY: $DISPLAY
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - ~/.Xauthority:/root/.Xauthority
-    network_mode: "host"
+      DISPLAY: "novnc:0.0"
+      ROS_MASTER_URI: "http://roscore:11311"
     tty: true
     stdin_open: true
+    command: bash
+  novnc:
+    image: theasp/novnc:latest
+    networks:
+      - ros2
+    environment:
+      DISPLAY_WIDTH: 3000
+      DISPLAY_HEIGHT: 1800
+      RUN_XTERM: "no"
+    ports: 
+      - "8080:8080"
+networks:
+  ros2:
