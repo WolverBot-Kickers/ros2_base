@@ -13,7 +13,7 @@ Ensure that you have Docker installed.
 Run 
 
 ```
-docker compose up
+docker compose up -d
 ```
 
 To build and run the containers. 
