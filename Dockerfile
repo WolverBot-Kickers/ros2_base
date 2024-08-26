@@ -21,4 +21,4 @@ ENV ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 # RUN chmod 0700 /tmp/
 
 # Add any configs as necessary.
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["./ros_entrypoint.sh"]

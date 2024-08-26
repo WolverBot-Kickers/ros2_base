@@ -9,6 +9,7 @@ services:
     tty: true
     stdin_open: true
     command: bash
+
   novnc:
     image: theasp/novnc:latest
     networks:
