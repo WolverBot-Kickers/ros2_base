@@ -16,9 +16,9 @@ ENV ROS_DOMAIN_ID=1
 ENV ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 
 # Display X11 forwarding vars
-ENV XDG_RUNTIME_DIR=/tmp
+# ENV XDG_RUNTIME_DIR=/tmp
 # Change permissions on run dir
-RUN chmod 0700 /tmp/
+# RUN chmod 0700 /tmp/
 
 # Add any configs as necessary.
 ENTRYPOINT ["./ros_entrypoint.sh"]
