@@ -9,7 +9,7 @@ This is a ROS2 Container Repository. This comes with the necessary dockerfile an
 
 ### Getting Started
 
-Ensure that you have Docker installed.
+Ensure that you have [Docker](https://docs.docker.com/engine/install/) installed.
 
 Run 
 

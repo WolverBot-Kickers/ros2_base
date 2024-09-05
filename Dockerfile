@@ -49,4 +49,4 @@ ENV ROS_DOMAIN_ID=1
 ENV ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 
 # Add any configs as necessary.
-ENTRYPOINT ["./ros_entrypoint.sh"]
+ENTRYPOINT ["/ros_entrypoint.sh"]
