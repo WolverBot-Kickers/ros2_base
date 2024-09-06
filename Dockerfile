@@ -41,6 +41,10 @@ RUN sudo ldconfig
 RUN echo -e '/usr/local/lib/simspark\n/usr/local/lib/rcssserver3d' | sudo tee /etc/ld.so.conf.d/spark.conf 
 RUN sudo ldconfig
 
+# Dependencies for MESA 3D
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+RUN apt-get install -y libgl1-mesa-dev libosmesa6-dev
+
 # Environment variables setup
 # Sets domain id. Change as necessary
 ENV ROS_DOMAIN_ID=1 
