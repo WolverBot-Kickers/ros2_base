@@ -52,5 +52,14 @@ ENV ROS_DOMAIN_ID=1
 # Sets ROS node visibility. Change as necessary
 ENV ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
 
+# set user & directory
+# password is wolverbot!
+RUN useradd -rm -d /home/wbk -s /bin/bash -g root -G sudo -u 1001 -p $(perl -e 'print crypt($ARGV[0], "password")' 'wolverbot!') wbk
+USER wbk
+WORKDIR /home/wbk
+
+# Set volume mount
+VOLUME [ "/home/wbk" ]
+
 # Add any configs as necessary.
 ENTRYPOINT ["/ros_entrypoint.sh"]
