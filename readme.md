@@ -44,7 +44,13 @@ Once you are satisfied that your container is working properly, you can run the 
 pkill rcs* -e -9
 ```
 
-### Setup Dev Containers/ Docker Extension on VsCode (optional)
+## Attaching to Containers in VS Code
+
+In order to do any development within the container, you must first attach to it. 
+
+To do this in VS Code, open a new window. Then, click the the >< symbol in the bottom left corner. This should bring up a menu, where you can select "Attach to running container".
+
+### Setup Dev Containers/ Docker Extension on VS Code (optional)
 
 Open VSCode pallette, and run:
 
